@@ -100,6 +100,21 @@ VLANs checked: 3
 
 GitHub Actions automatically runs the automated tests and validates the network inventory when changes are pushed to the `master` branch or a pull request targets `master`.
 
+## Pull Request Workflow
+
+This project uses a Git-based workflow to validate changes before they are merged into the `master` branch.
+
+1. Create a feature branch for your changes.
+2. Update the network inventory, validation logic, or tests.
+3. Run the automated tests locally.
+4. Push the feature branch to GitHub.
+5. Open a pull request targeting `master`.
+6. Review the GitHub Actions results before merging.
+
+The CI pipeline runs automated tests and validates the network inventory for pull requests targeting `master`.
+
+This workflow helps detect configuration errors early and supports safer, more maintainable network automation.
+
 ## Project Goals
 
 - Practice network automation and configuration validation
