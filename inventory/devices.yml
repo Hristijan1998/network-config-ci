@@ -1,0 +1,33 @@
+
+network:
+  name: enterprise-lab
+  environment: development
+
+vlans:
+  - id: 10
+    name: MANAGEMENT
+    subnet: 192.168.10.0/24
+
+  - id: 20
+    name: USERS
+    subnet: 192.168.20.0/24
+
+  - id: 30
+    name: SERVERS
+    subnet: 192.168.30.0/24
+
+devices:
+  - hostname: R1
+    type: router
+    management_ip: 192.168.10.1
+    vlans: [10, 20, 30]
+
+  - hostname: SW1
+    type: switch
+    management_ip: 192.168.10.2
+    vlans: [10, 20, 30]
+
+  - hostname: SW2
+    type: switch
+    management_ip: 192.168.10.3
+    vlans: [10, 20, 30]
